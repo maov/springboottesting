@@ -21,3 +21,16 @@ s2.add("lkjsdf");
 
 s1.eqauals(s2) // false
 ```
+
+
+You can use hamcrest to compare collections with
+
+```
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+...
+
+    assertThat(aList,  containsInAnyOrder("this", "someofThat"));
+
+```
