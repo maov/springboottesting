@@ -9,13 +9,20 @@ import java.util.Set;
 
 @Service
 public class ColorService implements  IColorService {
-    private final Set<String> colors = new HashSet<>();
 
-    public List<String> allColors(){
+    public static ArrayList<String> basicColors(){
         var colors = new ArrayList<String>();
         colors.add("Green");
         colors.add("Red");
+        colors.add("Blue");
+
         return colors;
+    }
+
+    private final Set<String> colors = new HashSet<String>(basicColors());
+
+    public List<String> allColors(){
+        return new ArrayList<>(this.colors);
     }
 
     public String saveColor(String color){

@@ -14,6 +14,6 @@ public class PaintBrush {
     private final String color;
 
     @NonNull
-    private final int size;
+    private final String size;
 
 }
